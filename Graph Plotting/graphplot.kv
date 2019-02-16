@@ -1,0 +1,15 @@
+<graph>:
+	name:"Plot"
+	BoxLayout:
+		size:root.size
+		orientaion: "vertical"
+		Button:
+			id: btn1
+			pos: root.x+200,root.top-self.height
+			text: "Plot"
+			font_size: 20
+			on_press:root.plot(self)
+			size_hint:.1,None
+			pos_hint:{'top':1}
+			
+			
