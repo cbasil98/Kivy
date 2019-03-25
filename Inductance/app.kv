@@ -1,0 +1,68 @@
+
+<induct>:
+    
+    display:result
+    rows:5
+    padding:10
+    spacing:10
+    orientation:"vertical"
+    BoxLayout:
+        size_hint:1,.8
+        Label:
+            text:"Design of Inductor"
+            font_size:40
+    BoxLayout:
+        size_hint:1,.5
+        Label:
+            text:"Peak current(A)"
+        TextInput:
+            id:Ip
+            font_size:20
+            multiline:False
+        Label:
+            text:"RMS current(A)"
+        TextInput:
+            id:Irms
+            font_size:20
+            multiline:False
+    BoxLayout:
+        size_hint:1,.5
+        Label:
+            text:"Inductance(H)"
+        TextInput:
+            id:L
+            font_size:20
+            multiline:False
+        Label:
+            text:"Current Density(A/m^2)"
+        TextInput:
+            id:J
+            font_size:20
+            multiline:False
+    BoxLayout:
+        size_hint:1,.5
+        Label:
+            text:"Winding Constant(kw)"
+        TextInput:
+            id:kw
+            font_size:20
+            multiline:False
+        Label:
+            text:"Max flux density(T)"
+        TextInput:
+            id:Bm
+            font_size:20
+            multiline:False
+    BoxLayout:
+        size_hint:1,.5
+        Button:
+            text:"Enter"
+            on_press:root.calc(Ip.text,Irms.text,L.text,J.text,kw.text,Bm.text)
+            
+    BoxLayout:
+        Label:
+            text:"Result"
+        TextInput:
+            id:result
+            font_size:20
+            multiline:False
